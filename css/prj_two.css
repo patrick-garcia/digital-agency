@@ -1,0 +1,524 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* reuseable */
+
+.wrapper {
+	width: 60%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+h2 {
+	font-size: 25px;
+	margin: 10px;
+}
+
+h4 {
+	margin-top: 75px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+h5 {
+	color: rgba(0, 0, 0, 0.5);
+	margin: 16px 0;
+}
+
+p {
+	font-size: 11px;
+	color: rgba(0, 0, 0, 0.5);
+	line-height: 200%;
+	font-family: 'roboto', sans-serif;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.center_heading {
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 80px;
+	margin-bottom: 50px;		
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.center_heading h2::after {
+	content: ".";
+	color: rgba(0, 213, 127, 1);
+	font-size: 30px;
+}
+
+.center_heading p::after {
+	content: "";
+	border-bottom: 2.5px solid rgba(0, 213, 127, 1);
+	padding-bottom: 30px;
+	width: 50px;
+	display: block;
+	margin: 0 auto;
+}
+
+li.feat_btn {
+	text-transform: uppercase;
+	display: inline;
+	border: 1px solid white;
+	padding: 8px 22px;
+	font-size: 11px;
+	margin-right: 5px;
+	transition: background-color .3s, border .3s;
+}
+
+li.feat_btn:hover {
+	background-color: rgba(0, 213, 127, 1);
+	border: 1px solid rgba(0, 213, 127, 1);
+}
+
+.flex_container {
+	display: flex;
+	margin: 0 auto;
+}
+
+.flex_column3 {
+	width: 33.3%;
+}
+
+.flex_column2 {
+	width: 50%;
+}
+
+.flex_column4 {
+	width: 25%;
+}
+
+.about_us ul {
+	margin-bottom: 0;
+}
+
+.full_width {
+	width: 100%;
+	background-color: rgba(245,245,245,1);
+}
+
+/* ---------- */
+
+header {
+	background-image: url("https://unsplash.it/1600/500/?random");
+	background-size: cover;
+	width: 100%;
+	height: 550px;
+	padding-top: 25px;
+}
+
+nav {
+	background-color: white;
+	padding: 10px 20px;
+}
+
+nav img {
+	width: 80px;
+	padding: 3px;
+}
+
+nav ul {
+	display: inline-block;
+	width: calc(99% - 80px);
+	text-align: right;
+	vertical-align: top;
+}
+
+nav li {
+	display: inline;
+    text-transform: uppercase;
+    margin-left: 5px;
+    padding: 0 5px;
+    font-size: 11px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+    /*transition: border-bottom 0.3s;*/
+} /*transition looks funny*/
+
+nav li:hover {
+	border-bottom: 5px solid lightgreen;
+	padding-bottom: 23px;
+}
+
+nav li i.fa-search, nav li i.fa-bars {
+	font-size: 14px;
+}
+
+/* end of nav */
+
+.header_main {
+	color: white;
+	text-align: center;
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+.header_main h1 {	
+	display: inline-block;
+	border: 2px solid white;
+	padding: 15px 20px;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin-bottom: 10px;
+	font-family: 'roboto', sans-serif;
+	letter-spacing: 3px;
+}
+
+.header_main p {
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 15px;
+	color: white;
+}
+
+/* end of main header */
+
+.about_us div.flex_container {
+	margin-bottom: 70px;
+}
+
+.about_us img {
+	width: 95%; /*contains img inside div therefore responsive*/
+}
+
+.flex_column3 p {
+	padding-right: 20px;
+}
+
+.flex_column3 p.read_more {
+	color: grey;
+    border: 1px solid lightgrey;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 5px 10px;
+    transition: color .3s, background-color .3s, border .3s;
+}
+
+.flex_column3 p.read_more:hover {
+	color: white;
+	background-color: rgba(0, 213, 127, 1);
+	border: 1px solid rgba(0, 213, 127, 1);
+}
+
+/* end of sub-section */
+
+.about_us .left ul {
+	display: flex;
+}
+
+.about_us .left li {
+    background-color: white;
+    font-size: 12px;
+    color: grey;
+    border-top: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    padding: 10px 20px;
+    height: 36px;
+    margin-top: 10px;
+    transition: border-top .3s, height .3s, margin-top .3s, padding-top .5s, ease-in-out;
+} /*looks funny, text in moving around during transition*/
+
+.about_us .left li:last-child {
+	border-right: 1px solid lightgrey;
+}
+
+.about_us .left li:hover {
+	border-top: 3px solid rgba(0, 213, 127, 1);
+	height: 46px;
+	margin-top: 0px;
+	padding-top: 18px;
+}
+
+/* .about_us .left ul li:hover .about_us ul li::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 10px 0 10px;
+	border-color: rgba(0, 213, 127, 1);
+}*/
+
+/* triangle */
+
+.about_us .left .img_desc {
+	background-color: white;
+	margin-bottom: 75px;
+	margin-right: 10px;
+	border: 1px solid lightgrey;
+}
+
+.about_us .left .img_desc img {
+	padding: 5%;
+	float: left;
+	width: 40%;
+	/*height: 150px;*/
+}
+
+.about_us .left .img_desc p {
+	display: inline-block;
+	float: left;
+	width: 60%;
+	padding: 10px 10px 0 0;
+}
+
+/* end of left */
+
+.about_us .right {
+	margin-left: 10px;
+}
+
+.about_us .right ul li ul {
+	background-color: white;
+	height: 36px;
+	padding-left: 15px;
+}
+
+.about_us .right ul li ul li {
+	display: inline-block;
+	font-size: 12px;
+	padding: 12px 5px 12px 0;
+}
+
+.about_us .right li.top ul {
+	color: white;
+	background-color: rgba(0, 213, 127, 1);
+	margin-top: 10px;
+}
+
+.about_us .right p {
+	margin: 0;
+	background-color: white;
+	padding: 15px;
+	height: 105px;
+	border: 1px solid lightgrey;
+}
+
+.about_us .right ul li:nth-child(3), .about_us .right ul li:nth-child(4) {
+	margin-top: 7px;
+	border: 1px solid lightgrey;	
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/* end of "About Us" section */
+
+.portfolio {
+	flex-wrap: wrap;
+	margin-bottom: 80px;
+}
+
+.portfolio img {
+	height: 100%;
+	padding: 10px 20px 10px 0;
+	margin: 0;
+}
+
+/* end of section */
+
+.our_work .full_width {
+	height: 400px;
+}
+
+.our_work .left ul {
+	margin-top: 20px;
+}
+
+.our_work .left li.feat_btn {
+	color: dimgrey;
+	border-color: dimgrey;
+} /* will be used for next section */
+
+.our_work .left li.feat_btn:hover {
+	color: white;
+	border: 1px solid rgba(0, 213, 127, 1);
+} /* will be used for next section */
+
+.our_work .right {
+	position: relative;
+}
+
+.our_work .right img {
+	position: absolute;
+	width: 95%;
+	top: 10%;
+	left: 8%;
+}
+
+/* end of "Our Work" */
+
+.services .col_desc {
+	margin: 0 10px 10px 10px;
+	padding: 0 10px 10px 10px;
+}
+
+/* I couldn't figure out how to insert the icon & maintain the layout of the columns therefore I removed it - sorry */
+
+/* end of subsection */
+
+.services .full_width {
+	height: 400px;
+}
+
+.services img {
+	width: 100%;
+}
+
+.services .right h4 {
+	margin-top: 100px;
+}
+
+.services .right p {
+	margin-bottom: 20px;
+}
+
+.services .right span {
+	color: rgba(0, 213, 127, 1);
+}
+
+/* ask how to use pseudo element inside of <p> */
+
+.services .main_video {
+	width: 86%;
+    margin: 60px 20px 20px 20px;
+    box-shadow: 10px 20px 15px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+
+.services .right li.feat_btn {
+	color: dimgrey;
+	border-color: dimgrey;
+}
+
+.services .right li.feat_btn:hover {
+	color: white;
+	border: 1px solid rgba(0, 213, 127, 1);
+}
+
+.service_list ul {
+	height: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.service_list ul li {
+	font-size: 25px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+/* end of services */
+
+.footer_main h5 {
+	color: lightgrey;
+}
+
+.footer_main p, .footer_main ul li ul li, .footer_main div.tags  {
+	color: grey;
+	font-size: 12px;
+	font-family: 'roboto', sans-serif;
+}
+
+.full_width_dark {
+	width: 100%;
+	background-color: rgba(60,60,60,1);
+}
+
+.footer_main .flex_column4 {
+	padding: 10px;
+}
+
+.fa-angle-double-right {
+	color: rgba(0, 213, 127, 1);
+}
+
+.footer_main ul {
+	display: flex;
+}
+
+.footer_main ul li {
+	line-height: 200%;
+	padding-right: 10px;
+}
+
+ul.email li {
+	display: inline-block;
+	padding-right: 0;
+}
+
+input.field {
+	width: 150px;
+	padding: 5px;
+	color: lightgrey;
+	font-size: 12px;
+	background-color: rgba(80,80,80,1);
+	border: 0;
+}
+
+.fa-arrow-right {
+	color: white;
+	background-color: rgba(0, 213, 127, 1);
+	height: 24px;
+	width: 24px;
+	padding: 6px 0 0 6px;
+	float: left;
+}
+
+.footer_main .tags p {
+	display: inline-block;
+	float: left;
+	background-color: rgba(80,80,80,1);
+	padding: 0 8px;
+	margin: 0 5px 5px 0;
+	transition: background .3s, color .3s;
+}
+
+.footer_main .tags p:hover {
+	background-color: lightgrey;
+	color: rgba(30,34,36,1);
+}
+
+/* end of subsection */
+
+.full_width_darker {
+	width: 100%;
+	background-color: rgba(30,34,36,1);
+}
+
+.social ul {	
+	margin: 0;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.social ul li {
+	color: lightgrey;
+	margin-right: 15px;
+}
+
+.social .foot_icon {
+	background-color: rgba(60,60,60,1);
+    padding: 7px;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+	transition: color .3s, background-color .3s;
+}
+
+.social .foot_icon:hover {
+	color: rgba(60,60,60,1);
+	background-color: lightgrey;
+}
+
+
+/* end of footer */
