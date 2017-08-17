@@ -5,4 +5,6 @@
 
 > site is not responsive
 
+> gulp workflow added later, not part of course
+
 > http://patrickgarcia.xyz/digital-agency/
